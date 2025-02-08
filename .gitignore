@@ -33,6 +33,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# editor config
+.idea
+.vscode
+
 **/*.trace
 **/*.zip
 **/*.tar.gz
