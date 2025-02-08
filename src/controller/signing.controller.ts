@@ -1,10 +1,11 @@
 import {Elysia} from "elysia";
-import {signingModel} from "../model/signing.model";
+import {SigningModel} from "../model/signing.model";
+import {SigningService} from '../service/signing.service'
 
-export const signingController = new Elysia().use(signingModel).post(
+export const SigningController = new Elysia().use(SigningModel).post(
 	'/uploadpfx',
 	async ({ body }) => {
-		console.log(body);
+		return SigningService.storePfx(body.file);
 	},
 	{
 		body: 'signing.uploadpfx.body',

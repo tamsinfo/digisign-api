@@ -4,6 +4,6 @@ const uploadPfxRequestBody = t.Object({
 	file: t.File(),
 });
 
-export const signingModel = new Elysia().model({
+export const SigningModel = new Elysia().model({
 	'signing.uploadpfx.body': uploadPfxRequestBody,
 });
