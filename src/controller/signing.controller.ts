@@ -8,6 +8,6 @@ export const SigningController = new Elysia().use(SigningModel).post(
 		return SigningService.storePfx(body.file);
 	},
 	{
-		body: 'signing.uploadpfx.body',
+		body: 'signing.uploadpfx.request.body',
 	},
 );
